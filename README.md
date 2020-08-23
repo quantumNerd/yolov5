@@ -1,3 +1,31 @@
+## Forked from yolov5 to include high FPS screenshot capability with
+* MSS
+* d3dshot
+
+## Preparation
+* If you want to use MSS, please run:
+```
+pip install mss
+```
+* If you want to use d3dshot, please run:
+```
+pip install d3dshot
+```
+
+## Usage demonstration
+* To use MSS as the screenshot backend:
+```
+python detect_d3dshot.py --weights weight.pt --source 1 --img-size 1024
+```
+* To use d3dshot as the screenshot backend, which is even faster than MSS (though only available in Windows newer than 8.1), can reach approximately 50-60 FPS:
+```
+python detect_mss.py --weights weight.pt --source 1 --img-size 1024
+```
+* The integer (>=1) after --source specifies which screen to record. Try 1 or 2 to see whether it is working as intended. If you use specify 0 instead, you will be accessing your webcam as originally programmed in yolov5.
+
+
+## Original README:
+
 <a href="https://apps.apple.com/app/id1452689527" target="_blank">
 <img src="https://user-images.githubusercontent.com/26833433/82944393-f7644d80-9f4f-11ea-8b87-1a5b04f555f1.jpg" width="1000"></a>
 &nbsp
